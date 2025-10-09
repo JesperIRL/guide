@@ -320,11 +320,11 @@ There are two parts to this task, how to do the bookkeeping in JBS, and how to d
    * Alternative 1 - the regression is identified directly.
      * Create a new issue of type [Bug]{.jbs-value}. This new issue will be the backout-issue **(B)**.
      * Use the same summary as **(O)** prefixed with `[BACKOUT]`.
-     * Add a _caused by_ link from **(O)** to **(B)**.
+     * Add a _causes_ link from **(B)** to **(O)**.
    * Alternative 2 - an investigation issue was created **(I)**, and during the investigation backing out the change is identified as the best solution.
      * Use the investigation issue **(I)** for the backout. (Don't create a new **(B)**.)
      * Change summary of **(I)** to the same as **(O)** and prefix with `[BACKOUT]`.
-     * Add a _caused by_ link from **(O)** and **(I)**.
+     * Add a _causes_ link from **(I)** and **(O)**.
 #. If **(O)** had a CSR request, update the CSR issue as follows:
    * Add a _csr-for_ link from the CSR to **(R)**.
    * Add a note to the CSR that explains the reason for the redo and the impact on the CSR.
